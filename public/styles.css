@@ -1,0 +1,591 @@
+/* ============================================================
+   株式会社アクティブ — Brand layer
+   Extends the base design tokens with gold accent + Active palette
+   ============================================================ */
+@import url("tokens.css");
+
+:root {
+  /* ---- ACTIVE BLUE LADDER (slightly brighter, more confident) ---- */
+  --blue-1000: #061632;
+  --blue-900:  #0B2552;   /* hero / primary anchor */
+  --blue-800:  #133272;
+  --blue-700:  #1C4391;
+  --blue-600:  #2A58B0;   /* CTA / accent blue (more vivid) */
+  --blue-500:  #4878D0;
+  --blue-400:  #7A99DE;
+  --blue-300:  #B3C4EA;
+  --blue-200:  #D4DEF1;
+  --blue-100:  #E8EEF8;
+  --blue-50:   #F4F7FC;
+
+  /* ---- YELLOW LADDER (high-impact accent against navy) ---- */
+  --gold-900:  #5C4900;
+  --gold-800:  #7A6200;   /* dark text on light bg */
+  --gold-700:  #A38800;
+  --gold-600:  #FFCD00;   /* primary bright yellow */
+  --gold-500:  #FFD93D;
+  --gold-400:  #FFE066;
+  --gold-300:  #FFEB99;
+  --gold-200:  #FFF3BF;
+  --gold-100:  #FFF9D9;
+  --gold-50:   #FFFCEF;
+
+  /* ---- BRAND ALIASES (use these, not raw) ---- */
+  --brand-blue:    var(--blue-900);
+  --brand-blue-2:  var(--blue-600);
+  --brand-gold:    var(--gold-600);
+  --brand-gold-dk: var(--gold-800);
+  --brand-paper:   #FFFFFF;
+  --brand-cream:   #FBF8F2;
+  --brand-ink:     #0B1A36;
+  --brand-ink-soft:#3F4D6B;
+  --brand-ink-mute:#8390A8;
+  --brand-line:    #E7ECF4;
+}
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+html { scroll-behavior: smooth; }
+html, body {
+  background: var(--brand-paper);
+  color: var(--brand-ink);
+  font-family: var(--font-jp-sans);
+}
+body { overflow-x: hidden; }
+::selection { background: var(--blue-900); color: #fff; }
+
+/* canonical container */
+.wrap {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 56px;
+}
+@media (max-width: 760px) { .wrap { padding: 0 22px; } }
+
+/* ============================================================
+   TYPE — Active variants
+   ============================================================ */
+.eyebrow-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--brand-gold-dk);
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+.eyebrow-en::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--brand-gold);
+}
+
+.label-num {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--brand-gold-dk);
+  white-space: nowrap;
+}
+
+.h-display-jp {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  color: var(--brand-blue);
+}
+
+.h-display-en {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: var(--brand-blue);
+}
+
+.body-jp-soft {
+  font-family: var(--font-jp-sans);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2.05;
+  letter-spacing: 0.05em;
+  color: var(--brand-ink-soft);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 280px;
+  height: 64px;
+  padding: 0 28px;
+  font-family: var(--font-jp-sans), var(--font-en-sans), sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background var(--dur-base) var(--ease-default),
+              color var(--dur-base) var(--ease-default),
+              border-color var(--dur-base) var(--ease-default),
+              transform var(--dur-base) var(--ease-default);
+  position: relative;
+  overflow: hidden;
+}
+.btn-active .btn-arrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform var(--dur-base) var(--ease-default);
+}
+.btn-active:hover .btn-arrow { transform: translateX(6px); }
+
+.btn-blue {
+  background: var(--brand-blue);
+  color: #fff;
+}
+.btn-blue:hover { background: var(--blue-1000); }
+
+.btn-gold-outline {
+  background: transparent;
+  color: var(--brand-blue);
+  border-color: var(--brand-gold);
+}
+.btn-gold-outline:hover { background: var(--gold-50); }
+
+.btn-ghost-blue {
+  background: #fff;
+  color: var(--brand-blue);
+  border-color: var(--brand-blue);
+}
+.btn-ghost-blue:hover { background: var(--blue-50); }
+
+/* ============================================================
+   DECORATIVE — gold thread, hairlines
+   ============================================================ */
+.gold-thread {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--brand-gold) 15%, var(--brand-gold) 85%, transparent 100%);
+}
+.gold-bar {
+  display: inline-block;
+  width: 48px;
+  height: 2px;
+  background: var(--brand-gold);
+}
+.hair { height: 1px; background: var(--brand-line); border: 0; margin: 0; }
+.hair-blue { height: 1px; background: var(--blue-200); border: 0; margin: 0; }
+
+/* ============================================================
+   SECTION LABEL (signature rhythm: huge EN serif + small JP)
+   ============================================================ */
+.sec-label {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 64px;
+}
+.sec-label .sec-jp {
+  font-family: var(--font-jp-serif);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  color: var(--brand-ink-soft);
+  display: inline-flex;
+  align-items: center;
+  order: 1;
+}
+.sec-label .sec-jp::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--brand-gold);
+  margin-right: 16px;
+}
+.sec-label .sec-en {
+  font-family: var(--font-jp-serif);
+  font-weight: 700;
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: var(--brand-blue);
+  order: 2;
+}
+.sec-label .sec-en .accent {
+  color: var(--brand-gold);
+  font-style: italic;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 900ms var(--ease-default), transform 900ms var(--ease-default);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1 { transition-delay: 80ms; }
+.reveal.delay-2 { transition-delay: 160ms; }
+.reveal.delay-3 { transition-delay: 240ms; }
+.reveal.delay-4 { transition-delay: 320ms; }
+.reveal.delay-5 { transition-delay: 400ms; }
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 64px;
+  animation: marquee 60s linear infinite;
+  padding-right: 64px;
+}
+.marquee-item {
+  display: inline-flex; align-items: center; gap: 24px;
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  color: var(--brand-blue);
+}
+.marquee-item .dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   PHOTO PLACEHOLDERS (drawn — no raster needed)
+   ============================================================ */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: var(--blue-100);
+  isolation: isolate;
+}
+.ph svg.bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.ph .ph-label {
+  position: absolute; left: 16px; bottom: 14px;
+  font-family: var(--font-en-sans); font-weight: 500;
+  font-size: 10px; letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(11, 37, 82, 0.55);
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+  background: #fff;
+  border: 1px solid var(--brand-line);
+  border-radius: 2px;
+  transition: border-color var(--dur-base) var(--ease-default),
+              transform var(--dur-slow) var(--ease-default);
+}
+.card:hover { border-color: var(--brand-gold); }
+
+/* ============================================================
+   HERO — 3D extrusion for the big English headline only
+   White face + gray extrusion (light → dark) + soft cast shadow.
+   ============================================================ */
+.hero-en-3d {
+  text-shadow:
+    2px 2px 0 #B8BFC9,
+    4px 4px 0 #8A93A3,
+    6px 6px 0 #5B6478,
+    8px 8px 0 #3A4254,
+    12px 14px 22px rgba(0, 0, 0, 0.55);
+}
+@media (max-width: 760px) {
+  .hero-en-3d {
+    text-shadow:
+      1px 1px 0 #B8BFC9,
+      3px 3px 0 #8A93A3,
+      5px 5px 0 #4B5466,
+      7px 8px 14px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ============================================================
+   DESKTOP TYPOGRAPHY SPEC (≥ 761px)
+   Spec: main heading 48 / section heading 36 / sub heading 28 /
+   body 16 / line-height 1.8
+   ============================================================ */
+@media (min-width: 761px) {
+  /* Body baseline */
+  body { font-size: 16px !important; line-height: 1.8 !important; }
+  /* Hero main JP headline */
+  #top h1[style*="clamp(40px, 6.4vw, 92px)"] {
+    font-size: 72px !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.04em !important;
+  }
+  /* Hero big English (ACTIVE SECURITY) — high impact */
+  #top [style*="clamp(44px, 8.4vw, 132px)"] {
+    font-size: 112px !important;
+    letter-spacing: 0.04em !important;
+  }
+  /* Hero sub paragraph */
+  #top p[style*="max-width: 640"] {
+    font-size: 22px !important;
+    line-height: 1.9 !important;
+    max-width: 760px !important;
+  }
+  /* Page hero (sub-pages) — JP headline ≈ 36 */
+  main section h1[style*="clamp(28px, 3.4vw, 42px)"] {
+    font-size: 36px !important;
+    line-height: 1.5 !important;
+  }
+  /* Sub-page Italic Title (PageHero) — keep brand, just trim */
+  main section [style*="clamp(56px, 7vw, 108px)"] {
+    font-size: 64px !important;
+  }
+  /* Section heading (.sec-en) — Japanese serif, bold */
+  .sec-en { font-size: 48px !important; line-height: 1.2 !important; font-weight: 700 !important; }
+  /* Section H2 / large in-section titles */
+  section h2 { font-size: 36px !important; line-height: 1.45 !important; }
+  /* Section H3 / sub headings */
+  section h3 { font-size: 28px !important; line-height: 1.5 !important; }
+  /* Body paragraphs in sections */
+  section p { font-size: 16px !important; line-height: 1.8 !important; }
+  .body-jp-soft, .body-jp { font-size: 16px !important; line-height: 1.8 !important; }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE OVERRIDES
+   Inline styles dominate the JSX; we use attribute selectors
+   with !important to override only at narrow viewports.
+   ============================================================ */
+@media (max-width: 760px) {
+  /* ---- All multi-column grids → single column ---- */
+  [style*="grid-template-columns: repeat(2"],
+  [style*="grid-template-columns: repeat(3"],
+  [style*="grid-template-columns: repeat(4"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns: 1.1fr 1fr"],
+  [style*="grid-template-columns: 1.2fr 1fr"],
+  [style*="grid-template-columns: 0.85fr 1.15fr"],
+  [style*="grid-template-columns: 0.8fr 1.2fr"],
+  [style*="grid-template-columns: 0.7fr 1.3fr"],
+  [style*="grid-template-columns: 0.9fr 1.1fr"],
+  [style*="grid-template-columns: 0.95fr 1.05fr"],
+  [style*="grid-template-columns: 0.95fr 1fr"],
+  [style*="grid-template-columns: 1fr 0.95fr"],
+  [style*="grid-template-columns: 160px 1fr"],
+  [style*="grid-template-columns: 180px 1fr"],
+  [style*="grid-template-columns: 220px 1fr"],
+  [style*="grid-template-columns: 240px 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* ---- Reduce vertical breathing room on large sections ---- */
+  [style*="padding: 160px 0 140px"],
+  [style*="padding: 160px 0 120px"],
+  [style*="padding: 140px 0 120px"],
+  [style*="padding: 140px 0 100px"],
+  [style*="padding: 140px 0 80px"],
+  [style*="padding: 140px 0"],
+  [style*="padding: 120px 0 100px"],
+  [style*="padding: 120px 0"],
+  [style*="padding: 96px 0 36px"],
+  [style*="padding: 96px 0"] {
+    padding-top: 64px !important;
+    padding-bottom: 56px !important;
+  }
+  /* Section label spacing */
+  .sec-label { margin-bottom: 36px !important; }
+  .sec-label .sec-en { font-size: clamp(26px, 8vw, 36px) !important; line-height: 1.3 !important; font-weight: 700 !important; }
+
+  /* ---- Buttons full-width, no min-width ---- */
+  .btn-active {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 56px !important;
+    padding: 0 20px !important;
+    gap: 12px !important;
+  }
+
+  /* ---- Photo placeholders: cap height so they don't dominate ---- */
+  .ph { height: 360px !important; }
+
+  /* ---- Hero: photo follows text, hide decorative vertical badge ---- */
+  #top [style*="writing-mode: vertical-rl"],
+  #top [style*="writingMode"] {
+    display: none !important;
+  }
+  /* Hero gold frame can overflow — keep but contain */
+  #top [style*="right: -28px"] { right: 0 !important; left: 12px !important; bottom: -12px !important; top: 12px !important; }
+  /* Hero floating SCENE tag — pull inside viewport */
+  #top [style*="right: -10px"] { right: 0 !important; bottom: 0 !important; padding: 14px 16px !important; }
+  /* Hero stats: reduce numeral size */
+  #top [style*="font-size: 44px"] { font-size: 32px !important; }
+
+  /* ---- Vertical writing-mode captions (VCap) — hide globally on mobile ---- */
+  [style*="writing-mode: vertical-rl"] { display: none !important; }
+
+  /* ---- Marquee item smaller ---- */
+  .marquee-item { font-size: 36px !important; gap: 14px !important; }
+  .marquee-track { gap: 32px !important; padding-right: 32px !important; }
+
+  /* ---- Big watermark numerals: shrink and dim further ---- */
+  [style*="font-size: clamp(280px"] { font-size: clamp(160px, 60vw, 280px) !important; }
+  [style*="font-size: clamp(150px"] { font-size: clamp(110px, 40vw, 180px) !important; }
+
+  /* ---- Photo frame offsets inside cards (services / president) ---- */
+  [style*="right: -28px"][style*="bottom: -28px"] {
+    right: -8px !important;
+    bottom: -8px !important;
+    left: 8px !important;
+    top: 8px !important;
+  }
+
+  /* ---- A Day timeline tab labels: ensure wrap & smaller ---- */
+  button[style*="padding: 12px 28px"] {
+    padding: 10px 18px !important;
+    font-size: 12px !important;
+  }
+
+  /* ---- Salary highlight grid spacing ---- */
+  [style*="padding: 40px 40px"] {
+    padding: 28px 24px !important;
+  }
+  /* Drop the divider between the two stacked stat cards */
+  [style*="border-right: 1px solid rgba(255,255,255,0.18)"] {
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.18) !important;
+  }
+
+  /* ---- Footer: smaller padding, stacked columns ---- */
+  footer .wrap > div { gap: 32px !important; }
+
+  /* ---- Generic gap reductions for grids that were row-gap heavy ---- */
+  [style*="gap: 64"] { gap: 28px !important; }
+  [style*="gap: 56"] { gap: 28px !important; }
+  [style*="gap: 48"] { gap: 24px !important; }
+  [style*="gap: 32"] { gap: 20px !important; }
+
+  /* ---- FAQ rows: tighten Q/A indents on narrow screens ---- */
+  #faq button[style*="gap: 28"] {
+    gap: 12px !important;
+    padding: 22px 4px !important;
+  }
+  #faq button > span:first-child { font-size: 22px !important; min-width: 36px !important; }
+  #faq button > span:nth-child(2) { font-size: 15px !important; letter-spacing: 0.06em !important; }
+  #faq button > span:last-child { width: 36px !important; height: 36px !important; }
+  #faq button + div > div {
+    padding: 0 4px 24px 48px !important;
+    gap: 12px !important;
+  }
+  #faq button + div > div > span:first-child {
+    min-width: 24px !important;
+    margin-right: 0 !important;
+  }
+  #faq button + div p {
+    font-size: 13px !important;
+    line-height: 1.85 !important;
+  }
+
+  /* ---- Hero (#top) — mobile-only tightening (proposals 1-2) ---- */
+  /* 1) Hero content padding: replace large 88px gutters with breathable values */
+  #top [style*="padding: 88px 88px 200px"] {
+    padding: 48px 22px 56px !important;
+    min-height: auto !important;
+  }
+  /* Section height: let content drive the height on mobile */
+  #top {
+    min-height: auto !important;
+  }
+  /* 2) Hero JP headline: smaller font + tighter line for narrow screens */
+  #top h1[style*="clamp(40px, 6.4vw, 92px)"] {
+    font-size: 30px !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.02em !important;
+  }
+  /* 2b) Massive English (ACTIVE SECURITY): drop to fit comfortably */
+  #top [style*="clamp(44px, 8.4vw, 132px)"] {
+    font-size: 44px !important;
+    letter-spacing: 0.02em !important;
+  }
+  /* 2c) Hero body text & stats — keep restrained on phone */
+  #top p[style*="max-width: 640"] {
+    font-size: 14px !important;
+    line-height: 1.9 !important;
+  }
+  /* Hero credentials chips wrap nicely */
+  #top [style*="flex-wrap: wrap"][style*="gap: 28"] {
+    gap: 14px 20px !important;
+  }
+  /* Hide angled gold band on phone — it competes with mobile tab bar */
+  #top [style*="clip-path: polygon(14% 0%"] { display: none !important; }
+  #top [style*="skewX(-72deg)"] { display: none !important; }
+  /* Bring SCROLL indicator closer in */
+  #top [style*="left: 32px"][style*="bottom: 140px"] {
+    left: 14px !important;
+    bottom: 96px !important;
+  }
+
+  /* ---- Company / contact info rows (proposal 3) ---- */
+  /* Allow long words like the company name to wrap mid-string only when needed,
+     keep Japanese phrases together so we don't get the "アクテ / ィブ" split. */
+  #info dd, #contact dd {
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
+    line-break: strict !important;
+  }
+  /* Tighten the COMPANY label / value grid on mobile */
+  #info dl > div, #contact dl > div {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Big company-name heading inside contact card — let it fit one line */
+  #contact h3 {
+    font-size: 22px !important;
+    letter-spacing: 0.04em !important;
+    white-space: nowrap !important;
+  }
+
+  /* Service cards (#services & sub services page): force photo above text
+     on mobile, overriding the desktop alternating order. */
+  #services article > div[style*="position: relative"],
+  [id^="service-"] > .wrap > div[style*="position: relative"] {
+    order: 1 !important;
+  }
+  #services article > div:not([style*="position: relative"]),
+  [id^="service-"] > .wrap > div:not([style*="position: relative"]) {
+    order: 2 !important;
+  }
+}

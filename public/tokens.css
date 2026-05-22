@@ -1,0 +1,390 @@
+/* =========================================================================
+   株式会社アクティブ — Design Tokens
+   Single source of truth for colour, type, spacing, radii, shadows, motion.
+   All component CSS should reference variables here. Never hard-code hex.
+   ========================================================================= */
+
+/* ---- Webfonts ----------------------------------------------------------
+   All fonts loaded from Google Fonts CDN.
+   Japanese: Noto Sans JP + Noto Serif JP
+   Latin:    Cormorant Garamond + Inter Tight
+   ----------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter+Tight:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+
+:root {
+  /* ---------- COLOR : NAVY LADDER ---------- */
+  --navy-1000: #050F22;
+  --navy-900:  #0A1F44;  /* primary brand */
+  --navy-800:  #112B5C;
+  --navy-700:  #1B3A6B;
+  --navy-600:  #2A4D85;
+  --navy-500:  #3C609B;
+  --navy-400:  #6A85B0;
+  --navy-300:  #9DAEC9;
+  --navy-200:  #C7D2E1;
+  --navy-100:  #E2E8F0;
+  --navy-50:   #F1F5FA;
+
+  /* ---------- COLOR : NEUTRAL ---------- */
+  --ink:       #0A1224;       /* body text on light */
+  --ink-soft:  #44506B;       /* secondary text on light */
+  --ink-mute:  #7A8499;       /* tertiary / captions */
+  --line:      #E2E8F0;       /* default hairline */
+  --line-soft: #EEF1F6;
+  --paper:     #FFFFFF;
+  --paper-2:   #FAFBFC;
+  --paper-3:   #F5F7FB;
+  --ivory:     #F4EFE6;       /* premium accent surface */
+
+  /* ---------- COLOR : SEMANTIC ---------- */
+  --success: #2F6F6A;          /* muted teal-blue */
+  --success-bg: #E6F0EE;
+  --danger:  #8A2A2A;           /* slate red */
+  --danger-bg: #F5E6E6;
+  --warning: #8A6B1F;            /* amber-bronze */
+  --warning-bg: #F5EEDC;
+  --info:    var(--navy-700);
+  --info-bg: var(--navy-50);
+
+  /* ---------- COLOR : SURFACES ---------- */
+  --bg:           var(--paper);
+  --bg-elevated:  var(--paper-2);
+  --bg-inverse:   var(--navy-900);
+  --fg:           var(--ink);
+  --fg-soft:      var(--ink-soft);
+  --fg-mute:      var(--ink-mute);
+  --fg-inverse:   #FFFFFF;
+  --fg-inverse-soft: rgba(255,255,255,0.72);
+
+  /* ---------- TYPOGRAPHY : FAMILIES ---------- */
+  --font-jp-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-jp-sans:  "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --font-en-serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  --font-en-sans:  "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:     ui-monospace, "SFMono-Regular", "JetBrains Mono", monospace;
+
+  /* ---------- TYPOGRAPHY : SIZE SCALE ---------- */
+  --fz-2xs: 10px;
+  --fz-xs:  11px;
+  --fz-sm:  13px;
+  --fz-md:  15px;
+  --fz-lg:  17px;
+  --fz-xl:  20px;
+  --fz-2xl: 26px;
+  --fz-3xl: 34px;
+  --fz-4xl: 44px;
+  --fz-5xl: 56px;
+  --fz-6xl: 72px;
+  --fz-7xl: 96px;
+
+  /* ---------- TYPOGRAPHY : WEIGHTS ---------- */
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  /* ---------- TYPOGRAPHY : LINE HEIGHT ---------- */
+  --lh-display: 1.4;
+  --lh-heading: 1.5;
+  --lh-body:    1.9;     /* generous for JP body */
+  --lh-ui:      1.5;
+  --lh-tight:   1.2;
+
+  /* ---------- TYPOGRAPHY : TRACKING ---------- */
+  --ls-en-display: 0.18em;   /* English caps display */
+  --ls-en-label:   0.22em;   /* CORPORATE / SERVICE labels */
+  --ls-en-ui:      0.04em;
+  --ls-jp-display: 0.08em;
+  --ls-jp-body:    0.04em;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --s-0:  0;
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10: 128px;
+  --s-11: 192px;
+
+  /* ---------- RADII ---------- */
+  --r-none: 0;
+  --r-xs:   2px;     /* buttons, inputs */
+  --r-sm:   4px;     /* cards */
+  --r-md:   6px;
+  --r-lg:   8px;
+  --r-pill: 999px;   /* avoid; reserved */
+
+  /* ---------- BORDERS ---------- */
+  --bw-hair:  1px;
+  --bw-thin:  1px;
+  --bw-thick: 2px;   /* reserved — rarely used */
+  --border:        var(--bw-hair) solid var(--line);
+  --border-strong: var(--bw-hair) solid var(--navy-300);
+
+  /* ---------- SHADOWS (very restrained) ---------- */
+  --sh-0: none;
+  --sh-header: 0 1px 0 var(--line);
+  --sh-menu:   0 12px 32px rgba(10,31,68,0.08);
+  --sh-modal:  0 24px 64px rgba(10,31,68,0.18);
+
+  /* ---------- MOTION ---------- */
+  --ease-default: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:   180ms;
+  --dur-base:   240ms;
+  --dur-slow:   360ms;
+  --dur-xslow:  640ms;
+  --dur-hero:   1200ms;
+
+  /* ---------- LAYOUT ---------- */
+  --max-w:       1240px;
+  --max-w-wide:  1440px;
+  --gutter:      24px;
+  --side:        64px;
+  --header-h:    72px;
+
+  /* ---------- Z-INDEX ---------- */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-sticky:  100;
+  --z-header:  1000;
+  --z-modal:   2000;
+  --z-toast:   3000;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --side: 24px;
+    --fz-6xl: 48px;
+    --fz-5xl: 40px;
+    --fz-4xl: 32px;
+    --fz-3xl: 26px;
+  }
+}
+
+/* =========================================================================
+   SEMANTIC TYPE CLASSES
+   ========================================================================= */
+
+.h-hero,
+h1.h-hero {
+  font-family: var(--font-jp-serif);
+  font-weight: var(--fw-medium);
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-jp-display);
+  color: var(--fg);
+  margin: 0;
+}
+
+.h-display {
+  font-family: var(--font-jp-serif);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-4xl);
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-jp-display);
+  color: var(--fg);
+}
+
+.h-section-en {
+  font-family: var(--font-en-serif);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-3xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-en-label);
+  text-transform: uppercase;
+  color: var(--fg);
+  font-style: italic;
+}
+
+.h-section-en-block {
+  font-family: var(--font-en-serif);
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-5xl);
+  line-height: 1.0;
+  letter-spacing: var(--ls-en-display);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.h-section-jp {
+  font-family: var(--font-jp-serif);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-md);
+  letter-spacing: var(--ls-jp-display);
+  color: var(--fg-soft);
+}
+
+.h1 { font-family: var(--font-jp-serif); font-weight: var(--fw-medium); font-size: var(--fz-4xl); line-height: var(--lh-display); letter-spacing: var(--ls-jp-display); margin: 0; }
+.h2 { font-family: var(--font-jp-serif); font-weight: var(--fw-medium); font-size: var(--fz-3xl); line-height: var(--lh-heading); letter-spacing: var(--ls-jp-display); margin: 0; }
+.h3 { font-family: var(--font-jp-sans);  font-weight: var(--fw-semibold); font-size: var(--fz-2xl); line-height: var(--lh-heading); letter-spacing: var(--ls-jp-body); margin: 0; }
+.h4 { font-family: var(--font-jp-sans);  font-weight: var(--fw-semibold); font-size: var(--fz-xl);  line-height: var(--lh-heading); letter-spacing: var(--ls-jp-body); margin: 0; }
+.h5 { font-family: var(--font-jp-sans);  font-weight: var(--fw-semibold); font-size: var(--fz-lg);  line-height: var(--lh-heading); letter-spacing: var(--ls-jp-body); margin: 0; }
+
+.body-jp {
+  font-family: var(--font-jp-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-md);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-jp-body);
+  color: var(--fg-soft);
+}
+.body-jp-lg {
+  font-family: var(--font-jp-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-lg);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-jp-body);
+  color: var(--fg-soft);
+}
+.body-en {
+  font-family: var(--font-en-sans);
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-md);
+  line-height: 1.6;
+  color: var(--fg-soft);
+}
+
+.caption {
+  font-family: var(--font-en-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-xs);
+  letter-spacing: var(--ls-en-label);
+  text-transform: uppercase;
+  color: var(--fg-mute);
+}
+
+.eyebrow {
+  font-family: var(--font-en-serif);
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--fz-md);
+  letter-spacing: var(--ls-en-label);
+  text-transform: uppercase;
+  color: var(--navy-700);
+}
+
+.label-en {
+  font-family: var(--font-en-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-xs);
+  letter-spacing: var(--ls-en-label);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  letter-spacing: 0;
+}
+
+/* Date stamps used in news lists */
+.date-stamp {
+  font-family: var(--font-en-sans);
+  font-weight: var(--fw-medium);
+  font-size: var(--fz-sm);
+  letter-spacing: 0.04em;
+  color: var(--fg-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================================
+   BASE
+   ========================================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-jp-sans);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+
+/* =========================================================================
+   BUTTONS
+   ========================================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 56px;
+  padding: 0 var(--s-7);
+  font-family: var(--font-jp-sans), var(--font-en-sans), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  border-radius: var(--r-xs);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-base) var(--ease-default),
+    color var(--dur-base) var(--ease-default),
+    border-color var(--dur-base) var(--ease-default);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--navy-900);
+  color: var(--fg-inverse);
+}
+.btn-primary:hover { background: var(--navy-1000); }
+.btn-primary:active { background: var(--navy-1000); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy-900);
+  border-color: var(--navy-900);
+}
+.btn-ghost:hover { background: var(--navy-50); }
+
+/* Arrow is provided by the JSX component as a <span class="btn-arrow">→</span>;
+   transform on hover handled in styles.css under .btn-active .btn-arrow */
+
+/* =========================================================================
+   LAYOUT HELPERS
+   ========================================================================= */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--side);
+}
+.section { padding: var(--s-10) 0; }
+.section-tight { padding: var(--s-9) 0; }
+
+.hairline { height: 1px; background: var(--line); border: 0; margin: 0; }
+
+/* Section label component (the brand's signature rhythm) */
+.section-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin-bottom: var(--s-8);
+}
+.section-label .en {
+  font-family: var(--font-en-serif);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+  font-size: var(--fz-5xl);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--navy-900);
+}
+.section-label .jp {
+  font-family: var(--font-jp-serif);
+  font-size: var(--fz-md);
+  letter-spacing: var(--ls-jp-display);
+  color: var(--fg-soft);
+  margin-left: 2px;
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://activenara.com/sitemap.xml

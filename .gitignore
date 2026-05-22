@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+npm-debug.log
+yarn-error.log
+*.log
+
+# Local dev tools — palette/toggle panel (not used in the Vite build)
+tweaks-panel.jsx
+
+# Claude / agent artifacts
+.claude/
