@@ -6,17 +6,24 @@ import React from 'react';
 // ---- Scroll reveal hook ----------------------------------------------------
 function useReveal() {
   React.useEffect(() => {
-    const els = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('is-in');
-          io.unobserve(e.target);
-        }
+    let ticking = false;
+    const reveal = () => {
+      ticking = false;
+      const limit = window.innerHeight * 0.92;
+      document.querySelectorAll('.reveal:not(.is-in)').forEach((el) => {
+        if (el.getBoundingClientRect().top < limit) el.classList.add('is-in');
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    };
+    const onScroll = () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(reveal); }
+    };
+    reveal();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
 }
 

@@ -15,6 +15,7 @@ import {
 } from './components/ServicesPage.jsx';
 import { Footer } from './components/Footer.jsx';
 import { MobileTabBar } from './components/MobileTabBar.jsx';
+import { useReveal } from './components/Shared.jsx';
 
 window.lucide = {
   createIcons: () => {
@@ -23,6 +24,7 @@ window.lucide = {
 };
 
 const App = () => {
+  useReveal();
   React.useEffect(() => {
     const tick = () => { if (window.lucide) window.lucide.createIcons(); };
     tick();
