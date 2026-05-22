@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL('.', import.meta.url));
 // ビルド出力は dist/。public/ の中身（assets・CSS・robots.txt 等）はそのまま dist/ 直下へコピーされます。
 export default defineConfig({
   root,
-  base: '/activenara-HP/',
+  base: '/',
   plugins: [react()],
   build: {
     outDir: 'dist',
