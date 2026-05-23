@@ -146,7 +146,8 @@ const Footer = () => (
               奈良県奈良市大宮町二丁目2番8号<br />
               中島第一ビル一階<br /><br />
               <span style={{ color: 'var(--brand-gold)' }}>採用に関するお問い合わせ</span><br />
-              <a href="tel:07050178069" style={{ color: 'inherit', textDecoration: 'none' }}>070-5017-8069</a>
+              <a href="tel:07050178069" style={{ color: 'inherit', textDecoration: 'none' }}>070-5017-8069</a><br />
+              <a href="mailto:saiyo@activenara.com" style={{ color: 'inherit', textDecoration: 'none' }}>saiyo@activenara.com</a>
             </div>
           </div>
         </div>
