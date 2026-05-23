@@ -33,6 +33,9 @@ const App = () => {
           jp="株式会社アクティブのご案内"
           sub="奈良に根ざし、地域の安全と円滑な現場運営を支える警備会社です。会社概要・理念・業務内容をご紹介します。"
           scene="facility"
+          imgSrc="assets/company-hero.jpg"
+          imgAlt="株式会社アクティブ 事務所外観"
+          imgPosition="center"
         />
         <Philosophy />
         <CompanyInfo />
