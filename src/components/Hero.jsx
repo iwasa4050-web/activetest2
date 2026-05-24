@@ -132,7 +132,7 @@ const Hero = () => {
           maxWidth: 640,
           fontFamily: 'var(--font-jp-sans)',
           fontWeight: 400,
-          fontSize: 15,
+          fontSize: 17,
           lineHeight: 2.05,
           letterSpacing: '0.06em',
           color: 'rgba(255,255,255,0.92)',
@@ -171,7 +171,7 @@ const Hero = () => {
             gap: 2,
           }}>
             <span style={{ fontSize: 18, letterSpacing: '0.12em' }}>警備スタッフ募集中</span>
-            <span style={{ fontSize: 13, letterSpacing: '0.18em', opacity: 0.85 }}>詳しくはコチラ</span>
+            <span style={{ fontSize: 15, letterSpacing: '0.18em', opacity: 0.85 }}>詳しくはコチラ</span>
           </span>
           <span className="btn-arrow" style={{ fontSize: 22 }}>→</span>
         </a>
@@ -185,7 +185,7 @@ const Hero = () => {
         writingMode: 'vertical-rl',
         fontFamily: 'var(--font-en-serif)',
         fontStyle: 'italic',
-        fontSize: 12,
+        fontSize: 14,
         letterSpacing: '0.4em',
         color: 'rgba(255,255,255,0.78)',
         zIndex: 3,

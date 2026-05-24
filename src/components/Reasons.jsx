@@ -88,7 +88,7 @@ const Reasons = () => (
         <div className="reveal delay-2" style={{
           maxWidth: 380,
           fontFamily: 'var(--font-jp-sans)',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 2.0,
           letterSpacing: '0.04em',
           color: 'var(--brand-ink-soft)',
@@ -137,7 +137,7 @@ const Reasons = () => (
                 <span style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 12,
+                  fontSize: 14,
                   letterSpacing: '0.36em',
                   color: 'var(--brand-gold-dk)',
                 }}>{r.en}</span>
@@ -171,7 +171,7 @@ const Reasons = () => (
             <p style={{
               fontFamily: 'var(--font-jp-sans)',
               fontWeight: 400,
-              fontSize: 14,
+              fontSize: 16,
               lineHeight: 2.0,
               letterSpacing: '0.04em',
               color: 'var(--brand-ink-soft)',

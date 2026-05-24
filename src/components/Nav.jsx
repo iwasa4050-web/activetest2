@@ -101,7 +101,7 @@ const Nav = ({ current = 'index' }) => {
                 <span className="nav-jp" style={{
                   fontFamily: 'var(--font-jp-sans)',
                   fontWeight: 500,
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: '0.18em',
                   color: jpColor,
                   whiteSpace: 'nowrap',
@@ -120,7 +120,7 @@ const Nav = ({ current = 'index' }) => {
           color: ctaColor,
           borderRadius: 2,
           fontFamily: 'var(--font-en-sans)',
-          fontSize: 11,
+          fontSize: 13,
           fontWeight: 500,
           letterSpacing: '0.28em',
           textTransform: 'uppercase',

@@ -77,7 +77,7 @@ const Footer = () => (
             marginTop: 24,
             maxWidth: 460,
             fontFamily: 'var(--font-jp-sans)',
-            fontSize: 13,
+            fontSize: 15,
             lineHeight: 2.0,
             color: 'rgba(255,255,255,0.7)',
           }}>
@@ -90,7 +90,7 @@ const Footer = () => (
             <div style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold)',
               marginBottom: 16,
@@ -112,14 +112,14 @@ const Footer = () => (
                     <span style={{
                       fontFamily: 'var(--font-en-serif)',
                       fontStyle: 'italic',
-                      fontSize: 12,
+                      fontSize: 14,
                       letterSpacing: '0.22em',
                       color: 'var(--brand-gold)',
                       minWidth: 76,
                     }}>{en}</span>
                     <span style={{
                       fontFamily: 'var(--font-jp-sans)',
-                      fontSize: 13,
+                      fontSize: 15,
                       letterSpacing: '0.1em',
                     }}>{jp}</span>
                   </a>
@@ -131,14 +131,14 @@ const Footer = () => (
             <div style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold)',
               marginBottom: 16,
             }}>CONTACT</div>
             <div style={{
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 2.0,
               color: 'rgba(255,255,255,0.8)',
             }}>
@@ -166,7 +166,7 @@ const Footer = () => (
           <Logo size={40} mono={false} />
           <span style={{
             fontFamily: 'var(--font-en-sans)',
-            fontSize: 11,
+            fontSize: 13,
             letterSpacing: '0.22em',
             color: 'rgba(255,255,255,0.5)',
           }}>© 2026 ACTIVE CO., LTD. ALL RIGHTS RESERVED.</span>
@@ -174,7 +174,7 @@ const Footer = () => (
         <div style={{
           fontFamily: 'var(--font-en-serif)',
           fontStyle: 'italic',
-          fontSize: 11,
+          fontSize: 13,
           letterSpacing: '0.32em',
           color: 'var(--brand-gold)',
         }}>

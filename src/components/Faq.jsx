@@ -93,7 +93,7 @@ const FaqRow = ({ item, i, open, onToggle }) =>
         <span style={{
         fontFamily: 'var(--font-en-serif)',
         fontStyle: 'italic',
-        fontSize: 14,
+        fontSize: 16,
         letterSpacing: '0.32em',
         color: 'var(--brand-gold-dk)',
         minWidth: 32,
@@ -102,7 +102,7 @@ const FaqRow = ({ item, i, open, onToggle }) =>
         <p style={{
         fontFamily: 'var(--font-jp-sans)',
         fontWeight: 400,
-        fontSize: 14,
+        fontSize: 16,
         lineHeight: 2.0,
         letterSpacing: '0.05em',
         color: 'var(--brand-ink-soft)',
@@ -168,7 +168,7 @@ const Faq = () => {
             <p className="reveal delay-2" style={{
               marginTop: 24,
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 2.0,
               color: 'var(--brand-ink-soft)',
               maxWidth: 320

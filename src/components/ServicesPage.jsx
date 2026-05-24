@@ -147,7 +147,7 @@ const ServicesIndex = () => (
             <span style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 12,
+              fontSize: 14,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold-dk)',
             }}>{s.num} · {s.en}</span>
@@ -210,7 +210,7 @@ const ServiceDetail = ({ s, i }) => {
                 <li key={sc} style={{
                   display: 'flex', alignItems: 'center', gap: 10,
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 13,
+                  fontSize: 15,
                   color: 'var(--brand-ink)',
                 }}>
                   <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand-gold)' }} />
@@ -281,21 +281,21 @@ const ServiceDetail = ({ s, i }) => {
                   <span style={{
                     fontFamily: 'var(--font-en-serif)',
                     fontStyle: 'italic',
-                    fontSize: 11,
+                    fontSize: 13,
                     letterSpacing: '0.24em',
                     color: 'var(--brand-gold-dk)',
                   }}>0{j + 1}</span>
                   <span style={{
                     fontFamily: 'var(--font-jp-serif)',
                     fontWeight: 500,
-                    fontSize: 14,
+                    fontSize: 16,
                     letterSpacing: '0.1em',
                     color: 'var(--brand-blue)',
                   }}>{f.label}</span>
                 </div>
                 <span style={{
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 13,
+                  fontSize: 15,
                   lineHeight: 1.85,
                   letterSpacing: '0.04em',
                   color: 'var(--brand-ink-soft)',
@@ -356,7 +356,7 @@ const ServiceApproach = () => (
             <span style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold-dk)',
             }}>{a.en}</span>
@@ -370,7 +370,7 @@ const ServiceApproach = () => (
             }}>{a.jp}</h4>
             <p style={{
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 1.95,
               color: 'var(--brand-ink-soft)',
               margin: 0,
@@ -406,7 +406,7 @@ const ServiceContactBanner = () => (
           <div style={{
             fontFamily: 'var(--font-en-serif)',
             fontStyle: 'italic',
-            fontSize: 13,
+            fontSize: 15,
             letterSpacing: '0.32em',
             color: 'var(--brand-gold)',
             marginBottom: 14,

@@ -34,7 +34,7 @@ const Contact = () => (
         <p className="reveal delay-1" style={{
           maxWidth: 400,
           fontFamily: 'var(--font-jp-sans)',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 2.0,
           color: 'var(--brand-ink-soft)',
         }}>
@@ -75,14 +75,14 @@ const Contact = () => (
                   <span style={{
                     fontFamily: 'var(--font-en-serif)',
                     fontStyle: 'italic',
-                    fontSize: 11,
+                    fontSize: 13,
                     letterSpacing: '0.32em',
                     color: 'var(--brand-gold-dk)',
                   }}>{r.en}</span>
                   <span style={{
                     fontFamily: 'var(--font-jp-serif)',
                     fontWeight: 500,
-                    fontSize: 13,
+                    fontSize: 15,
                     letterSpacing: '0.18em',
                     color: 'var(--brand-blue)',
                   }}>{r.jp}</span>
@@ -90,7 +90,7 @@ const Contact = () => (
                 <dd style={{
                   margin: 0,
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 14,
+                  fontSize: 16,
                   lineHeight: 1.9,
                   letterSpacing: '0.04em',
                   color: 'var(--brand-ink)',
@@ -139,7 +139,7 @@ const Contact = () => (
               gap: 6,
               marginBottom: 24,
               fontFamily: 'var(--font-en-sans)',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.24em',
               color: 'var(--brand-gold-dk)',
               textDecoration: 'none',
@@ -153,11 +153,11 @@ const Contact = () => (
             <i data-lucide="map-pin" style={{ width: 22, height: 22, color: 'var(--brand-gold-dk)', flexShrink: 0, marginTop: 2 }}></i>
             <div>
               <div style={{
-                fontFamily: 'var(--font-jp-serif)', fontWeight: 500, fontSize: 14,
+                fontFamily: 'var(--font-jp-serif)', fontWeight: 500, fontSize: 16,
                 letterSpacing: '0.12em', color: 'var(--brand-blue)',
               }}>本社</div>
               <div style={{
-                fontFamily: 'var(--font-jp-sans)', fontSize: 13, lineHeight: 1.9,
+                fontFamily: 'var(--font-jp-sans)', fontSize: 15, lineHeight: 1.9,
                 color: 'var(--brand-ink-soft)', marginTop: 4,
               }}>
                 〒630-8115 奈良県奈良市大宮町二丁目2番8号<br />中島第一ビル一階

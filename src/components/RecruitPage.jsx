@@ -71,7 +71,7 @@ const PresidentMessage = () => (
             <span style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 12,
+              fontSize: 14,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold-dk)',
               whiteSpace: 'nowrap',
@@ -180,7 +180,7 @@ const SupportPolicy = () => (
                 <span style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: '0.32em',
                   color: 'var(--brand-gold-dk)',
                 }}>{s.en}</span>
@@ -205,7 +205,7 @@ const SupportPolicy = () => (
             }}>{s.jp}</h3>
             <p style={{
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 1.95,
               color: 'var(--brand-ink-soft)',
               margin: 0,
@@ -288,7 +288,7 @@ const ADay = () => {
                   padding: '12px 28px',
                   fontFamily: 'var(--font-jp-serif)',
                   fontWeight: 500,
-                  fontSize: 14,
+                  fontSize: 16,
                   letterSpacing: '0.18em',
                   transition: 'background 240ms var(--ease-default), color 240ms var(--ease-default)',
                 }}
@@ -296,7 +296,7 @@ const ADay = () => {
                 {v.label} <span style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: '0.18em',
                   marginLeft: 8,
                   color: tab === k ? 'var(--brand-gold)' : 'var(--brand-ink-mute)',
@@ -354,7 +354,7 @@ const ADay = () => {
                 }}>{d.jp}</h4>
                 <p style={{
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 13,
+                  fontSize: 15,
                   lineHeight: 1.95,
                   color: 'var(--brand-ink-soft)',
                   margin: 0,
@@ -408,7 +408,7 @@ const Career = () => (
               padding: '6px 12px',
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.28em',
             }}>STEP {String(i + 1).padStart(2, '0')}</div>
 
@@ -433,7 +433,7 @@ const Career = () => (
             }}>{c.jp}</h4>
             <p style={{
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 1.95,
               color: 'var(--brand-ink-soft)',
               margin: 0,
@@ -463,7 +463,7 @@ const Career = () => (
             <span style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 14,
+              fontSize: 16,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold)',
             }}>{p.sub} · 推定月収</span>
@@ -528,7 +528,7 @@ const WantedProfile = () => (
         <div style={{
           fontFamily: 'var(--font-en-serif)',
           fontStyle: 'italic',
-          fontSize: 12,
+          fontSize: 14,
           letterSpacing: '0.32em',
           color: 'var(--brand-gold-dk)',
           marginBottom: 14,
@@ -582,7 +582,7 @@ const WantedProfile = () => (
             padding: '6px 14px',
             fontFamily: 'var(--font-en-serif)',
             fontStyle: 'italic',
-            fontSize: 11,
+            fontSize: 13,
             letterSpacing: '0.32em',
             fontWeight: 500,
           }}>WANTED</div>
@@ -601,7 +601,7 @@ const WantedProfile = () => (
                 alignItems: 'flex-start',
                 gap: 14,
                 fontFamily: 'var(--font-jp-sans)',
-                fontSize: 15,
+                fontSize: 17,
                 lineHeight: 1.85,
                 color: 'var(--brand-ink)',
               }}>
@@ -641,7 +641,7 @@ const WantedProfile = () => (
             padding: '5px 14px',
             fontFamily: 'var(--font-en-serif)',
             fontStyle: 'italic',
-            fontSize: 11,
+            fontSize: 13,
             letterSpacing: '0.32em',
             fontWeight: 500,
           }}>NOT FIT</div>
@@ -660,7 +660,7 @@ const WantedProfile = () => (
                 alignItems: 'flex-start',
                 gap: 14,
                 fontFamily: 'var(--font-jp-sans)',
-                fontSize: 15,
+                fontSize: 17,
                 lineHeight: 1.85,
                 color: 'var(--brand-ink)',
               }}>
@@ -686,7 +686,7 @@ const WantedProfile = () => (
             paddingTop: 20,
             borderTop: '1px dashed var(--brand-line)',
             fontFamily: 'var(--font-jp-sans)',
-            fontSize: 13,
+            fontSize: 15,
             lineHeight: 1.85,
             color: 'var(--brand-ink-mute)',
             margin: '24px 0 0',
@@ -749,7 +749,7 @@ const ApplicationFlow = () => (
         <div style={{
           fontFamily: 'var(--font-en-serif)',
           fontStyle: 'italic',
-          fontSize: 12,
+          fontSize: 14,
           letterSpacing: '0.32em',
           color: 'var(--brand-gold-dk)',
           marginBottom: 14,
@@ -827,7 +827,7 @@ const ApplicationFlow = () => (
               }}>{s.title}</h3>
               <p style={{
                 fontFamily: 'var(--font-jp-sans)',
-                fontSize: 15,
+                fontSize: 17,
                 lineHeight: 1.95,
                 letterSpacing: '0.04em',
                 color: 'var(--brand-ink-soft)',

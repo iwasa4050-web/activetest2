@@ -53,7 +53,7 @@ const SalaryDetail = () => (
             <span style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 12,
+              fontSize: 14,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold-dk)',
             }}>{sec.en}</span>
@@ -77,14 +77,14 @@ const SalaryDetail = () => (
                 <dt style={{
                   fontFamily: 'var(--font-jp-serif)',
                   fontWeight: 500,
-                  fontSize: 14,
+                  fontSize: 16,
                   letterSpacing: '0.16em',
                   color: 'var(--brand-blue)',
                 }}>{k}</dt>
                 <dd style={{
                   margin: 0,
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 14,
+                  fontSize: 16,
                   lineHeight: 1.9,
                   color: 'var(--brand-ink-soft)',
                   whiteSpace: 'pre-line',
@@ -124,7 +124,7 @@ const SalaryDetail = () => (
                 <div style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: '0.32em',
                   color: 'var(--brand-gold-dk)',
                   marginBottom: 4,
@@ -132,14 +132,14 @@ const SalaryDetail = () => (
                 <div style={{
                   fontFamily: 'var(--font-jp-serif)',
                   fontWeight: 500,
-                  fontSize: 15,
+                  fontSize: 17,
                   letterSpacing: '0.12em',
                   color: 'var(--brand-blue)',
                   marginBottom: 8,
                 }}>{p.jp}</div>
                 <div style={{
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 12,
+                  fontSize: 14,
                   lineHeight: 1.85,
                   color: 'var(--brand-ink-soft)',
                 }}>{p.desc}</div>
@@ -188,7 +188,7 @@ const ApplyCTA = () => (
           <div style={{
             fontFamily: 'var(--font-en-serif)',
             fontStyle: 'italic',
-            fontSize: 13,
+            fontSize: 15,
             letterSpacing: '0.32em',
             color: 'var(--brand-gold)',
             marginBottom: 14,

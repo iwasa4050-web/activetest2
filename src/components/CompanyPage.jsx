@@ -134,14 +134,14 @@ const CompanyInfo = () => (
                 <span style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 11,
+                  fontSize: 13,
                   letterSpacing: '0.32em',
                   color: 'var(--brand-gold-dk)',
                 }}>{r.en}</span>
                 <span style={{
                   fontFamily: 'var(--font-jp-serif)',
                   fontWeight: 500,
-                  fontSize: 14,
+                  fontSize: 16,
                   letterSpacing: '0.18em',
                   color: 'var(--brand-blue)',
                 }}>{r.jp}</span>
@@ -149,7 +149,7 @@ const CompanyInfo = () => (
               <dd style={{
                 margin: 0,
                 fontFamily: 'var(--font-jp-sans)',
-                fontSize: 14,
+                fontSize: 16,
                 lineHeight: 1.9,
                 letterSpacing: '0.04em',
                 color: 'var(--brand-ink)',
@@ -235,7 +235,7 @@ const BusinessBrief = () => (
             }}>{s.jp}</h3>
             <p style={{
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 13,
+              fontSize: 15,
               lineHeight: 1.95,
               color: 'var(--brand-ink-soft)',
               margin: 0,
@@ -271,7 +271,7 @@ const RecruitBanner = () => (
           <div style={{
             fontFamily: 'var(--font-en-serif)',
             fontStyle: 'italic',
-            fontSize: 13,
+            fontSize: 15,
             letterSpacing: '0.32em',
             color: 'var(--brand-gold)',
             marginBottom: 14,

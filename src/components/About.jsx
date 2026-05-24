@@ -57,7 +57,7 @@ const About = () => (
             <div style={{
               fontFamily: 'var(--font-en-serif)',
               fontStyle: 'italic',
-              fontSize: 11,
+              fontSize: 13,
               letterSpacing: '0.32em',
               color: 'var(--brand-gold-dk)',
             }}>
@@ -123,7 +123,7 @@ const About = () => (
                 <span style={{
                   fontFamily: 'var(--font-en-serif)',
                   fontStyle: 'italic',
-                  fontSize: 12,
+                  fontSize: 14,
                   letterSpacing: '0.32em',
                   color: 'var(--brand-gold-dk)',
                 }}>0{i+1} · {v.en}</span>
@@ -136,7 +136,7 @@ const About = () => (
                 }}>{v.jp}</span>
                 <span style={{
                   fontFamily: 'var(--font-jp-sans)',
-                  fontSize: 12,
+                  fontSize: 14,
                   lineHeight: 1.8,
                   color: 'var(--brand-ink-soft)',
                 }}>{v.desc}</span>

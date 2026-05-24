@@ -27,7 +27,7 @@ const PageHero = ({ en, jp, sub, accent = '.', scene = 'facility', imgSrc, imgAl
       writingMode: 'vertical-rl',
       fontFamily: 'var(--font-en-serif)',
       fontStyle: 'italic',
-      fontSize: 12,
+      fontSize: 14,
       letterSpacing: '0.4em',
       color: 'var(--brand-gold-dk)',
     }}>
@@ -84,7 +84,7 @@ const PageHero = ({ en, jp, sub, accent = '.', scene = 'facility', imgSrc, imgAl
             marginTop: 28,
             maxWidth: 520,
             fontFamily: 'var(--font-jp-sans)',
-            fontSize: 14,
+            fontSize: 16,
             lineHeight: 2.0,
             letterSpacing: '0.06em',
             color: 'var(--brand-ink-soft)',

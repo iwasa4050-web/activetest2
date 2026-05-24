@@ -93,14 +93,14 @@ const ServiceCard = ({ s, i }) => {
               borderTop: j === 0 ? '1px solid var(--brand-line)' : 'none',
               borderBottom: '1px solid var(--brand-line)',
               fontFamily: 'var(--font-jp-sans)',
-              fontSize: 14,
+              fontSize: 16,
               letterSpacing: '0.08em',
               color: 'var(--brand-ink)',
             }}>
               <span style={{
                 fontFamily: 'var(--font-en-serif)',
                 fontStyle: 'italic',
-                fontSize: 11,
+                fontSize: 13,
                 letterSpacing: '0.24em',
                 color: 'var(--brand-gold-dk)',
                 minWidth: 28,
@@ -135,7 +135,7 @@ const Services = () => (
         <div className="reveal delay-2" style={{
           maxWidth: 380,
           fontFamily: 'var(--font-jp-sans)',
-          fontSize: 14,
+          fontSize: 16,
           lineHeight: 2.0,
           color: 'var(--brand-ink-soft)',
         }}>

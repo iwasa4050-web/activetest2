@@ -229,7 +229,7 @@ const VCap = ({ children, side = 'left', top = '50%', color, opacity = 0.7 }) =>
   writingMode: 'vertical-rl',
   fontFamily: 'var(--font-en-serif)',
   fontStyle: 'italic',
-  fontSize: 12,
+  fontSize: 14,
   letterSpacing: '0.4em',
   textTransform: 'uppercase',
   color: color || 'var(--brand-blue)',

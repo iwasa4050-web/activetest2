@@ -93,7 +93,7 @@ const Recruit = () => (
       <p className="reveal delay-2" style={{
         marginTop: 18,
         fontFamily: 'var(--font-jp-sans)',
-        fontSize: 14,
+        fontSize: 16,
         letterSpacing: '0.16em',
         color: 'rgba(255,255,255,0.78)',
       }}>
