@@ -845,15 +845,21 @@ const ApplicationFlow = () => (
         justifyContent: 'center',
         padding: '0 16px',
       }}>
-        <a href="#apply" className="btn-active btn-blue" style={{
-          width: '100%',
-          maxWidth: 560,
-          height: 88,
-          padding: '0 48px',
-          fontSize: 22,
-          letterSpacing: '0.32em',
-          gap: 24,
-        }}>
+        <a
+          href="https://jp.indeed.com/m/viewjob?jk=a881f67613154460"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-active btn-blue"
+          style={{
+            width: '100%',
+            maxWidth: 560,
+            height: 88,
+            padding: '0 48px',
+            fontSize: 22,
+            letterSpacing: '0.32em',
+            gap: 24,
+          }}
+        >
           <span>応募する</span>
           <span className="btn-arrow" style={{ fontSize: 22 }}>→</span>
         </a>

@@ -204,10 +204,16 @@ const ApplyCTA = () => (
             まずはお気軽に、<span style={{ color: 'var(--brand-gold)' }}>ご応募ください</span>。
           </h3>
         </div>
-        <a href="#" className="btn-active" style={{
-          background: 'var(--brand-gold)',
-          color: 'var(--brand-blue)',
-        }}>
+        <a
+          href="https://jp.indeed.com/m/viewjob?jk=a881f67613154460"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-active"
+          style={{
+            background: 'var(--brand-gold)',
+            color: 'var(--brand-blue)',
+          }}
+        >
           <span>応募はこちらから</span>
           <span className="btn-arrow">→</span>
         </a>
