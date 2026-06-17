@@ -85,6 +85,24 @@ const PresidentMessage = () => (
               whiteSpace: 'nowrap',
             }}>坂本 信也</span>
           </div>
+          <div style={{
+            marginTop: 24,
+            position: 'relative',
+            width: '100%',
+            paddingBottom: '56.25%',
+            height: 0,
+            overflow: 'hidden',
+            borderRadius: 2,
+          }}>
+            <iframe
+              src="https://www.youtube.com/embed/WIdwim5uLOI"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+              title="株式会社アクティブ 代表メッセージ動画"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
 
         <div className="reveal delay-1">
