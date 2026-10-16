@@ -871,7 +871,7 @@ const ApplicationFlow = () => (
         padding: '0 16px',
       }}>
         <a
-          href="https://jp.indeed.com/viewjob?jk=09899b2502425372&from=shareddesktop_copy"
+          href="https://jp.indeed.com/job/夜勤道路工事現場の交通誘導警備スタッフ-2d3ea4d946904c37"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-active btn-blue"
