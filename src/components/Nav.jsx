@@ -6,11 +6,10 @@ import { Logo } from './Shared.jsx';
 // (white-on-transparent) treatment when over the dark hero on index.html.
 
 const NAV_ITEMS = [
-{ en: 'TOP', jp: 'トップ', href: 'index.html', page: 'index' },
-{ en: 'COMPANY', jp: '会社概要', href: 'company.html', page: 'company' },
-{ en: 'SERVICE', jp: 'サービス', href: 'services.html', page: 'services' },
-{ en: 'RECRUIT', jp: '採用情報', href: 'recruit.html', page: 'recruit' },
-{ en: 'CONTACT', jp: 'お問い合わせ', href: 'index.html#contact', page: 'index' }];
+{ label: '会社概要', href: 'company.html', page: 'company' },
+{ label: 'サービス', href: 'services.html', page: 'services' },
+{ label: '採用情報', href: 'recruit.html', page: 'recruit' },
+{ label: 'お問い合わせ', href: 'index.html#contact', page: 'index' }];
 
 
 const Nav = ({ current = 'index' }) => {
@@ -29,7 +28,6 @@ const Nav = ({ current = 'index' }) => {
   // Color tokens used inside the nav
   const enColor = dark ? '#FFFFFF' : 'var(--brand-blue)';
   const enColorActive = dark ? 'var(--brand-gold)' : 'var(--brand-gold-dk)';
-  const jpColor = dark ? 'rgba(255,255,255,0.6)' : 'var(--brand-ink-mute)';
   const brandColor = dark ? '#FFFFFF' : 'var(--brand-blue)';
   const subColor = dark ? 'rgba(255,255,255,0.6)' : 'var(--brand-ink-mute)';
   const ctaBg = dark ? 'var(--brand-gold)' : 'var(--brand-blue)';
@@ -83,30 +81,19 @@ const Nav = ({ current = 'index' }) => {
           {NAV_ITEMS.map((item) => {
             const isActive = item.page === current && !item.href.includes('#');
             return (
-              <a key={item.en} href={item.href} className={`nav-link${isActive ? ' is-active' : ''}`} style={{
-                display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 5,
+              <a key={item.href} href={item.href} className={`nav-link${isActive ? ' is-active' : ''}`} style={{
+                display: 'inline-flex', alignItems: 'center',
                 position: 'relative',
                 padding: '8px 0',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                fontFamily: 'var(--font-jp-serif)',
+                fontWeight: 500,
+                fontSize: 16,
+                letterSpacing: '0.14em',
+                color: isActive ? enColorActive : enColor,
+                transition: 'color 320ms var(--ease-default)'
               }}>
-                <span style={{
-                  fontFamily: 'var(--font-en-serif)',
-                  fontStyle: 'italic',
-                  fontWeight: 600,
-                  fontSize: 17,
-                  letterSpacing: '0.16em',
-                  color: isActive ? enColorActive : enColor,
-                  transition: 'color 320ms var(--ease-default)'
-                }}>{item.en}</span>
-                <span className="nav-jp" style={{
-                  fontFamily: 'var(--font-jp-sans)',
-                  fontWeight: 500,
-                  fontSize: 13,
-                  letterSpacing: '0.18em',
-                  color: jpColor,
-                  whiteSpace: 'nowrap',
-                  transition: 'color 320ms var(--ease-default)'
-                }}>{item.jp}</span>
+                {item.label}
               </a>);
 
           })}
@@ -144,8 +131,7 @@ const Nav = ({ current = 'index' }) => {
         .nav-link:hover::after,
         .nav-link.is-active::after { left: 0; width: 100%; }
         @media (max-width: 1180px) {
-          .active-nav { gap: 16px !important; }
-          .nav-jp { display: none !important; }
+          .active-nav { gap: 20px !important; }
         }
         @media (max-width: 900px) {
           .active-nav { display: none !important; }
