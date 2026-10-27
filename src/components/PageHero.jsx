@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
-import { Photo, VCap } from './Shared.jsx';
+import { Photo } from './Shared.jsx';
 // PageHero — compact hero for sub-pages (company.html, recruit.html).
 // Same DNA as the main Hero but shorter, with breadcrumb.
 
@@ -18,21 +18,6 @@ const PageHero = ({ en, jp, sub, accent = '.', scene = 'facility', imgSrc, imgAl
       <line x1="0" y1="80%" x2="100%" y2="80%" stroke="var(--brand-line)" strokeWidth="1" />
       <line x1="62%" y1="0" x2="62%" y2="100%" stroke="var(--brand-line)" strokeWidth="1" />
     </svg>
-
-    <VCap side="left" top="50%">
-      ACTIVE · SECURITY · NARA
-    </VCap>
-    <div style={{
-      position: 'absolute', right: 36, top: 120,
-      writingMode: 'vertical-rl',
-      fontFamily: 'var(--font-en-serif)',
-      fontStyle: 'italic',
-      fontSize: 14,
-      letterSpacing: '0.4em',
-      color: 'var(--brand-gold-dk)',
-    }}>
-      EST · 2026 · NARA · JAPAN
-    </div>
 
     <div style={{
       position: 'relative',

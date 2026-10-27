@@ -219,26 +219,4 @@ const Logo = ({ size = 28, mono = false }) => {
     </span>);
 };
 
-// ---- Vertical caption (signature device) -----------------------------------
-const VCap = ({ children, side = 'left', top = '50%', color, opacity = 0.7 }) =>
-<div style={{
-  position: 'absolute',
-  [side]: 36,
-  top,
-  transform: 'translateY(-50%)',
-  writingMode: 'vertical-rl',
-  fontFamily: 'var(--font-en-serif)',
-  fontStyle: 'italic',
-  fontSize: 14,
-  letterSpacing: '0.4em',
-  textTransform: 'uppercase',
-  color: color || 'var(--brand-blue)',
-  opacity,
-  pointerEvents: 'none',
-  whiteSpace: 'nowrap'
-}}>
-    {children}
-  </div>;
-
-
-export { useReveal, SectionLabel, Photo, Logo, VCap };
+export { useReveal, SectionLabel, Photo, Logo };

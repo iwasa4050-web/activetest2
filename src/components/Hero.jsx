@@ -177,21 +177,6 @@ const Hero = () => {
         </a>
 
       </div>
-
-      {/* EST badge — vertical right */}
-      <div style={{
-        position: 'absolute',
-        right: 24, top: 140,
-        writingMode: 'vertical-rl',
-        fontFamily: 'var(--font-en-serif)',
-        fontStyle: 'italic',
-        fontSize: 14,
-        letterSpacing: '0.4em',
-        color: 'rgba(255,255,255,0.78)',
-        zIndex: 3,
-      }}>
-        EST · 2026 · NARA · JAPAN
-      </div>
     </section>
   );
 };
