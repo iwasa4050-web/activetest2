@@ -39,30 +39,6 @@ const Hero = () => {
         zIndex: 1,
       }} />
 
-      {/* SCROLL — vertical, bottom-left */}
-      <div style={{
-        position: 'absolute',
-        left: 32, bottom: 140,
-        zIndex: 4,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 14,
-      }}>
-        <div style={{
-          width: 1, height: 56,
-          background: 'linear-gradient(180deg, transparent, rgba(255,255,255,0.6))'
-        }} />
-        <span style={{
-          writingMode: 'vertical-rl',
-          fontFamily: 'var(--font-en-sans)',
-          fontWeight: 500,
-          fontSize: 10,
-          letterSpacing: '0.42em',
-          color: 'rgba(255,255,255,0.92)',
-        }}>SCROLL</span>
-      </div>
-
       {/* Angled accent band — bottom right */}
       <div style={{
         position: 'absolute',
